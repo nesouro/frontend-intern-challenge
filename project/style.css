@@ -1,22 +1,37 @@
+/*
+Folha de estilo da página Encurte seus links - chr.dc
+
+Fontes: Roboto, Roboto Slab;
+Cores: branco #FFFFFF, vermelho #AA1423, cinza escuro #777, cinza claro #EEE, cinza intermediário #D2D2D2, laranja #FF6E14;
+
+*/
+
+
+body { 
+	margin: 0; 
+	border: 0; 
+}
+
+/*fonte padrão, sem serifa*/
 p {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 }
 
-.s {
-	font-family: 'Roboto Slab', serif;
-}
+/*fonte com serifa*/
+.s {font-family: 'Roboto Slab', serif;}
 
-.w {
-	color: #FFFFFF;
-}
+/*texto em branco*/
+.w {color: #FFFFFF;}
 
+/*header*/
 #header {
 	height: 50px;
 	text-align: center;
 	line-height: 50px;
 }
 
+/*dimensões e imagem principal*/
 .input {
 	background-image: url("Assets/background-home.jpg");
 	background-color: #AA1423;
@@ -27,6 +42,7 @@ p {
 	position: relative;
 }
 
+/*posiciona os elementos do principal*/
 .input-content {
 	text-align: center;
 	position: absolute;
@@ -35,7 +51,14 @@ p {
 	transform: translate(-50%, -50%);
 }
 
+/*título principal*/
+h1 {
+	font-family: 'Roboto Slab', serif;
+	font-size: 36px;
+	color: #FFFFFF;
+}
 
+/*campo de links*/
 input {
 	width: 335px;
 	padding: 11px 0px;
@@ -50,16 +73,19 @@ input {
 	display: inline-block;
 }
 
+/*linha do campo de links*/
 .linha {
 	white-space: nowrap;
 	overflow-x: auto;
 	overflow-y: hidden;
 }
 
+/*deixa elementos do campo de links na mesma linha*/
 .form {
 	display: inline-block;
 }
 
+/*texto dentro do campo de links*/
 ::placeholder {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
@@ -67,7 +93,19 @@ input {
 	opacity: 1;
 }
 
-.button {
+/* 'x' */
+#exit {
+	position: absolute;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color: #FFFFFF;
+	right: 30%;
+	top: 85%;
+	visibility: hidden;
+}
+
+/*botão*/
+#button {
 	background-color: #FF6E14;
 	border: none;
 	color: #FFFFFF;
@@ -84,24 +122,21 @@ input {
 	display: inline-block;
 }
 
-h1 {
-	font-family: 'Roboto Slab', serif;
-	font-size: 36px;
-	color: #FFFFFF;
-}
-
+/*subtítulos*/
 h2 {
 	font-family: 'Roboto Slab', serif; 
 	font-size: 32px;
 	color: #AA1423;
 }
 
+/*centraliza elementos nas divs*/
 .center {
 	display: table;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+/*dimensões top 5*/
 #top {
 	display: table-cell;
 	vertical-align: middle;
@@ -110,11 +145,13 @@ h2 {
 	text-align: center;
 }
 
-table {
+/*lista de links*/
+table  {
 	border-collapse: collapse;
 	width: 367px;
 }
 
+/*texto da lista*/
 td {
 	padding: 8px;
 	text-align: left;
@@ -123,10 +160,16 @@ td {
 	font-size: 16px;
 }
 
+/*retira a linha do último elemento da lista*/
+.none {border-bottom: transparent;}
+
+/*texto em cinza*/
 .g {color: #777;}
 
+/*alinhamento números da lista*/
 #r {text-align: right;}
 
+/*dimensões hits*/
 #hits {
 	background-color: #EEE;
 	color: #AA1423;
@@ -134,6 +177,7 @@ td {
 	text-align: center;
 }
 
+/*triângulo*/
 #arrow {
 	border-top: 35px solid #FFFFFF;
     border-left: 35px solid transparent; 
@@ -145,6 +189,7 @@ td {
     height: 0;
 }
 
+/*alinhamento hits*/
 .content {
 	display: table-cell;
 	vertical-align: middle;
@@ -152,6 +197,7 @@ td {
 	text-align: center;
 }
 
+/*caixa com número de hits*/
 .cx {
 	border-style: solid;
 	border-color: #D2D2D2;
@@ -164,31 +210,148 @@ td {
 	background-color: #FFFFFF;
 }
 
-
+/*dimensão do footer*/
 #footer {
 	white-space: nowrap;
 	height: 62px;
-	overflow-x: auto;
+	overflow-x: visible;
 	overflow-y: hidden;
-	margin-left: 15%;
-	margin-right: 15%;
 }
 
+/*aparência do link esquerdo*/
 .link {
 	font-size: 20px;
 	display: inline-block;
+	margin-left: 15%;
 }
 
-a {
+.link a {
 	color: #AA1423;
 	text-decoration: none;
 }
 
+/*ícones redes sociais*/
 .icons {
 	display: inline-block;
-	padding-left: 80%;
+	margin-left: 55%;
 }
 
 
 
 
+
+/*-------mobile-------*/
+
+@media only screen and (max-width: 600px) {
+
+/*header*/
+#header {
+	height: 35px;
+	line-height: 35px;
+}
+
+img {
+	width: auto;
+	height: 35px;
+}
+
+/*menor margem no principal*/
+.input-content {
+	top: 35%; 
+	left: 50%;
+	transform: translate(-50%, -25%);
+}
+
+/*imagem de fundo*/
+.input {height: 300px;}
+
+/*título*/
+h1 {font-size: 18px;}
+
+/*texto*/
+p {font-size: 12px;}
+
+/*campo pra links menor*/
+input {
+	width: 300px;
+	font-size: 12px;
+}
+
+/*texto dentro do campo de links*/
+::placeholder {
+	font-size: 12px;
+}
+
+/* 'x' */
+#exit {
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	visibility: hidden;
+}
+
+/*botao em baixo*/
+.form {display: block;}
+
+/*botão*/
+#button {
+	width: 106px;
+	height: 34px;
+	font-size: 12px;
+	margin: 20px 2px;
+}
+
+/*subtitulos*/
+h2 {font-size: 18px;}
+
+/*altura top 5*/
+#top {height: 280px;}
+
+/*largura da lista*/
+table  {width: 280px;}
+
+/*texto da lista*/
+td {
+	padding: 8px;
+	font-size: 12px;
+}
+
+/*dimensões hits*/
+#hits {height: 170px;}
+
+/*triângulo*/
+#arrow {
+	border-top: 25px solid #FFFFFF;
+    border-left: 25px solid transparent; 
+    border-right: 25px solid transparent; 
+    margin-left: -25px;
+}
+
+/*alinhamento hits*/
+.content {height: 170px;}
+
+/*caixa com número de hits*/
+.cx {
+	width: 110px;
+	height: 35px;
+}
+
+/*dimensão do footer*/
+#footer {height: 35px;}
+
+/*aparência do link esquerdo*/
+.link {
+	font-size: 12px;
+	margin-left: 5%;
+}
+
+/*ícones redes sociais*/
+.icons {
+	width: 55px;
+	height: 55px;
+}
+
+.icons img {
+	width: 30%;
+	height: auto;
+}

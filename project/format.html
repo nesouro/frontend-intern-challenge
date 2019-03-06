@@ -1,55 +1,93 @@
+<!-- HTML da página Encurte seus links - chr.dc -->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
 	<meta charset="utf-8"/>
-	<title>Encurte seus links Chaordic</title>
-</head>
-
+	<title>Encurte seus links</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css" />
+</head>
 
 
 <body>
-	
+
+
+<!--header-->
 <div id="header">
 	<img src="Assets/logo-chaordic.png" width="125.14px" height="51.84px" />
 </div>
 	
 
+<!--principal-->
 <div class="input">
 	<div class="input-content">
 		<h1>Encurte seus links.</h1>
 		<p class="w">Links são longos. Encurte os links que você deseja compartilhar, e acompanhe enquanto viajam através da internet.</p>
 
+
+	<!--campo de links-->
 		<div class="linha">
 			<form class="form">
-				<input type="text" name="link" placeholder="Cole o seu link aqui" />
+				<input type="text" id="ph" name="link" placeholder="Cole o seu link aqui">
+				<span id="exit">&times;</span>
 			</form>
 
-			<button class="button">ENCURTAR</button> 
+			<button id="button">
+				<span id="fade">
+					ENCURTAR
+				</span>
+			</button> 
 		</div>
 	</div>
 </div>
 	
+
+<!--TOP 5-->
 <div class="center">
 	<div id="top">
 		<h2>TOP 5<h2>
 
+	<!--lista de links-->
 		<table>
 			<tr>
-			<td>http://chr.dc/xyzxyz</td>
-			<td class="g" id="r">7.919</td>
+				<td>http://chr.dc/xyzxyz</td>
+				<td class="g" id="r">7.919</td>
+			</tr>
+			<tr>
+				<td>http://chr.dc/abcabc</td>
+				<td class="g" id="r">6.899</td>
+			</tr>
+			<tr>
+				<td>http://chr.dc/derder</td>
+				<td class="g" id="r">2.111</td>
+			</tr>
+			<tr>
+				<td>http://chr.dc/fghfgh</td>
+				<td class="g" id="r">617</td>
+			</tr>
+			<tr>
+				<td class="none">http://chr.dc/yuiyui</td>
+				<td class="g none" id="r">43</td>
+			</tr>
 		</table>
 	</div>
 </div>
 
 
+<!--HITS-->
 <div id="hits">
+
+	<!--triângulo-->
 	<div id="arrow"></div>
+
+	<!--hits-->
 	<div class="center">
 		<div class="content">
 			<h2>HITS</h2>
-			<h2 class="cx"> 00.000.000 </h2>
+			<h2 class="cx"> 35.713.571 </h2>
 			<p class="g">Cliques em links</p>
 		</div>
 	</div>
@@ -57,17 +95,24 @@
 
 
 
+<!--footer-->
 <div id="footer">
+
+	<!--link chr.dc-->	
 	<p class="link">
 		<a href="https://www.linx.com.br/">chr.dc</a>
 	</p>
+
+	<!--ícones redes sociais-->
 	<div class="icons">
-		<a href="https://twitter.com/LinxRetail"><img src="Assets/icon-twitter.png" width="26px" height="26px"/></a> &nbsp;
+		<a href="https://twitter.com/LinxRetail"><img src="Assets/icon-twitter.png" width="26px" height="26px"/></a> 
+		&nbsp;
 		<a href="https://www.facebook.com/linxretail/"><img src="Assets/icon-facebook.png" width="26px" height="26px" /></a>
 	</div>
 </div>
 
 
-</body>
+<!--JavasCript-->
+<script type="text/javascript" src="main.js"></script>
 
 </html>
